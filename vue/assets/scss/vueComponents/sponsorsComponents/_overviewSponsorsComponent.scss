@@ -1,0 +1,17 @@
+/*
+ * Relevant Component: Sponsors/overview_sponsors.vue
+ */
+
+.accordion-title-sponsors{
+    @extend %overview-sponsors-component-accordion-title;
+    text-align: center;
+}
+
+/* Makes CSS changes that applies to every card text. */
+.card-text-sponsors-accordion{
+    @extend %overview-sponsors-component-accordion-body;
+}
+
+.sponsors-accordion-list-style{
+    list-style-type: none;
+}

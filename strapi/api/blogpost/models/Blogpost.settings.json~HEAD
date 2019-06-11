@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "blogpost",
+  "info": {
+    "name": "blogpost",
+    "description": "Blog posts for projects."
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "cmsuser": {
+      "model": "cmsuser",
+      "via": "blogposts"
+    },
+    "project": {
+      "model": "project",
+      "via": "blogposts"
+    },
+    "LastPublished": {
+      "default": "",
+      "type": "date"
+    },
+    "Description": {
+      "default": "",
+      "type": "text"
+    },
+    "Picture": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "blogpost"
+    },
+    "user": {
+      "model": "user",
+      "via": "blogposts",
+      "plugin": "users-permissions"
+    }
+  }
+}

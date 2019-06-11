@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "school",
+  "info": {
+    "name": "school",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "school_name": {
+      "default": "",
+      "type": "string"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "schools"
+    }
+  }
+}

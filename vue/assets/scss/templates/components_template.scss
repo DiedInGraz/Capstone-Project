@@ -1,0 +1,160 @@
+/**********************************************************************
+ * COMPONENTS TEMPLATE
+ * Created by: Tim Lee
+ *
+ * This template SCSS file is the pages template that can modify CSS
+ * attributes in the Components directory.
+ ******************************************************************************/
+
+
+/**************************************************************************
+ * _headerComponent.scss
+ **************************************************************************/
+
+ /* The header above the navigation links. */
+%header-component-style{
+    @extend %template-header-component-style;
+}
+
+
+/* The logo's width */
+$header-img-width: $template-header-img-width;
+
+/* Padding for the logo */
+%header-logo-style-padding{
+    @extend %template-logo-style-padding;
+}
+
+
+/*******************************************************************************
+ * _homepageComponent.scss
+ ******************************************************************************/
+
+/* Images in the homepage carousel */
+%homepage-component-img-carousel{
+    @extend %template-homepage-component-img-carousel;
+}
+
+/* CSS for buttons on homepage */
+%homepage-component-button{
+    @extend %template-homepage-component-button;
+}
+
+/* Placement of homepage buttons */
+%homepage-component-btn-wrap{
+    @extend %template-homepage-component-btn-wrap;
+}
+
+/* Set default photo for home page */
+$default-home-page: $default-background-img-homepage;
+/* Navigation bar CSS on the homepage */
+%homepage-component-bg{
+    width: 100%;
+    min-height: 900px;
+    background: url($default-home-page);
+}
+
+/* Background image's settings for the homepage */
+$homepage-component-bg-grad: $template-homepage-component-bg-grad;
+
+/* Title of the header on the homepage */
+%homepage-component-header-title{
+    @extend %template-homepage-component-header-title;
+}
+
+/* CSS for the divider between header and text body */
+%homepage-component-header-divider{
+    @extend %template-homepage-component-header-divider;
+}
+
+/* Text color of the body */
+$homepage-component-header-body-color: $template-homepage-component-header-body-color;
+
+/* CSS for the box of text containing title and body text */
+%homepage-component-header-box{
+    @extend %template-homepage-component-header-box;
+}
+
+
+/**************************************************************************
+ * _navbarComponent.scss
+ **************************************************************************/
+
+/* CSS for styling the navbar */
+%navbar-component-style{
+    @extend %template-navbar-component-style;
+}
+
+/* Color for the navigation bar */
+$navbar-component-color: $template-navbar-component-color;
+
+/* CSS for the individual buttons on the navigation bar */
+%navbar-component-text-style{
+    @extend %template-navbar-component-text-style;
+}
+
+/* CSS for the disabled buttons */
+%navbar-component-disabled-style{
+    @extend %template-navbar-component-disabled-style;
+}
+
+/* Sets gradient for a button when clicked on */
+$navbar-component-focus-button: $template-navbar-component-focus-button;
+
+
+/***************************************************************************
+ * accountMenusComponents directory
+ *      - adminDropdownComponent.scss
+ *      - professorDropdownComponent.scss
+ *      - publicDropdownComponent.scss
+ *      - sponsorDropdownComponent.scss
+ *      - studentDropdownComponent.scss
+ **************************************************************************/
+
+/* Admin's view of the Account button on navbar */
+%dropdown-account-button{
+    @extend %template-dropdown-account-button;
+}
+
+%dropdown-account-button-disabled{
+    @extend %template-dropdown-account-button-disabled;
+}
+
+$dropdown-item-active: rgb(138, 138, 138);
+
+/*************************************************************************
+ * _overviewSponsorsComponent.scss
+ *************************************************************************/
+
+/* CSS for title of each accordion sub-section */
+%overview-sponsors-component-accordion-title{
+    @extend %template-overview-sponsors-component-accordion-title;
+}
+
+/* Style for body of each accordion sub-section */
+%overview-sponsors-component-accordion-body{
+    @extend %template-overview-sponsors-component-accordion-body;
+}
+
+
+/************************************************************************
+ * _whySponsorComponent.scss
+ ***********************************************************************/
+
+/* Left column of sponsors page */
+%why-sponsor-component-left-col{
+    @extend %template-why-sponsor-component-left-col;
+}
+
+/* Sub-Title for 'Why Sponsor Us'? */
+%why-sponsor-component-subtitle{
+    @extend %template-why-sponsor-component-subtitle;
+}
+
+/* Explanation section right beneath */
+%why-sponsor-component-body{
+    @extend %template-why-sponsor-component-body;
+}
+
+
+

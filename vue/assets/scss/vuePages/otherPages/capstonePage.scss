@@ -1,0 +1,39 @@
+/*
+ * Relevant Page: Capstone.vue
+ */
+
+.capstone-page-center-all-things{
+    @extend %capstone-page-center-all-things;
+}
+
+.capstone-page-dropdown-searchbar-margin{
+    @extend %capstone-page-searchbar-margin-from-top;
+}
+
+.capstone-page-background-detail{
+    background-color:$capstone-page-background-color;
+}
+
+.capstone-page-all-dropdown{
+    @extend %capstone-page-all-dropdown;
+}
+
+.capstone-page-sponsors-box-and-dropdown{
+    @extend %capstone-page-sponsors-box-and-dropdown;
+}
+
+.capstone-page-have-sponsors-box{
+    @extend %capstone-page-have-sponsors-box;
+}
+
+.capstone-page-sorting-dropdown{
+    @extend %capstone-page-sorting-dropdown;
+}
+
+img.capstone-page-img {
+    @extend %capstone-page-project-cards;
+}
+
+.capstone-page-searchbar{
+    @extend %capstone-page-searchbar;
+}

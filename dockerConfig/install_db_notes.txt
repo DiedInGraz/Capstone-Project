@@ -1,0 +1,50 @@
+#sequence to import data into a database:
+
+#Start the project using docker-compose. You must be in the following directory to run this command: section01-group02/dockerConfig/
+docker-compose up
+
+#In a new terminal (terminal #2), access the Mongo container
+docker exec -it dockerconfig_mongo-db_1 bash
+
+#Inside of the Mongo container, import admin user (for a blank install)
+mongorestore --db serverTest blankInstall/serverTest
+
+#In a new terminal (terminal #3), access the Strapi container (Do not close the terminal that has the Mongo container running)
+docker exec -it dockerconfig_strapi-frontend_1 bash
+
+#Inside of the Strapi container, change directory to project directory
+cd section01-group02/strapi/
+
+#Inside of the Strapi container, install Strapi with special privileges, then have Strapi launch. This may take a while (~3 min) - make some coffee. 
+npm install --unsafe-perm && strapi start
+
+#Inside of the Strapi container, quit the Strapi process
+CTRL-C
+
+#Inside of the Strapi container, exit the Strapi container
+exit
+
+#Save the changes to the Mongo container so that the next time you start the project using docker-compose, the Mongo container with the updated database will be the one used.
+docker commit dockerconfig_mongo-db_1 mongo-db:0.0
+
+#Exit the current terminal (terminal #3)
+exit
+
+#Inside of the Mongo container, exit the Mongo container
+exit
+
+#Exit the current terminal (terminal #2)
+exit
+
+#You should now be back at the terminal where you ran docker-compose. Quit the current docker-compose command by using CTRL-C twice.
+CTRL-C
+CTRL-C
+
+#Start the project using docker-compose. Your databse should now have all the data you need, and the project will be running in localhost:3000 and localhost:1337
+docker-compose up
+
+#Login to Strapi and change the admin email (using the GUI at localhost:1337)
+username: admin
+password: development01
+
+

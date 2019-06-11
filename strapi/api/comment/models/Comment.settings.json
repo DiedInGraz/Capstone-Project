@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "comment",
+  "info": {
+    "name": "comment",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "comment_detail": {
+      "default": "",
+      "type": "text"
+    },
+    "comment_date": {
+      "default": "",
+      "type": "date"
+    },
+    "blogpost": {
+      "model": "blogpost",
+      "via": "comments"
+    },
+    "users": {
+      "collection": "user",
+      "dominant": true,
+      "via": "comments",
+      "plugin": "users-permissions"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/*
+ * Relevant Page: ManageTeamtoCapstone.vue
+ */
+
+.manage-team-to-capstone-page{
+    @extend %manage-team-to-capstone-page-background;
+}
+
+.selectoption-css {
+    @extend %manage-team-to-capstone-page-selectoption-css;
+}
+
+.selectuser-css {
+    @extend %manage-team-to-capstone-page-selectuser-css;
+}

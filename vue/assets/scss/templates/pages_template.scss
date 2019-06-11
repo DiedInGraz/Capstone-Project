@@ -1,0 +1,402 @@
+/**********************************************************************
+ * PAGES TEMPLATE
+ * Created by: Tim Lee
+ *
+ * This template SCSS file is the pages template that can modify CSS
+ * attributes in the Pages directory.
+ ******************************************************************************/
+
+
+/************************************************************************
+*   blogpostsPage Directory:
+*       - blogpostIDPage.scss
+***********************************************************************/
+
+/* Background color for blogpost pages */
+$blogpost-id-background-color: $template-blogpost-id-background-color;
+
+/* Font size of title of blogpost */
+$blogpost-id-title-font-size: $template-blogpost-id-title-font-size;
+
+/* Font size of description of blogpost */
+$blogpost-id-desc-font-size: 22px;
+
+/* CSS for heading of comments section in blogpost page */
+%blogpost-id-comments-id-heading{
+    @extend %template-blogpost-id-comments-id-heading;
+}
+
+/* Size of blogpost image */
+%blogpost-id-image-size{
+    @extend %template-blogpost-id-image-size;
+}
+
+/* CSS for username of a comment */
+%blogpost-id-username{
+    @extend %template-blogpost-id-username;
+}
+
+
+/**************************************************************************
+ * accessDeniedPage.scss
+ **************************************************************************/
+
+/* CSS for access denied */
+%access-denied-block{
+    text-align: center;
+    margin-top: 10%
+}
+
+
+/***************************************************************************
+ * capstonePage.scss
+ ***************************************************************************/
+
+/* Background color of capstone page */
+$capstone-page-background-color: $template-capstone-page-background-color;
+
+/* Centers all user action stuff into center of page */
+%capstone-page-center-all-things{
+    @extend %template-capstone-page-center-all-things;
+}
+
+/* Layout of the all dropdown bar */
+%capstone-page-all-dropdown{
+    @extend %template-capstone-page-all-dropdown;
+}
+
+/* The margin from the navbar to the options section */
+%capstone-page-searchbar-margin-from-top{
+    @extend %template-capstone-page-searchbar-margin-from-top;
+}
+
+/* Layout for the have sponsors checkbox */
+%capstone-page-have-sponsors-box{
+    @extend %template-capstone-page-have-sponsors-box;
+}
+
+/* Layout for sorting dropdown */
+%capstone-page-sorting-dropdown{
+    @extend %template-capstone-page-sorting-dropdown;
+}
+
+/* Layout for sponsors checkbox and time sorting dropdown */
+%capstone-page-sponsors-box-and-dropdown{
+    @extend %template-capstone-page-sponsors-box-and-dropdown;
+}
+
+/* CSS for project cards */
+%capstone-page-project-cards{
+    @extend %template-capstone-page-project-cards;
+}
+
+/* Formatting of search bar */
+%capstone-page-searchbar{
+    @extend %template-capstone-page-searchbar;
+}
+
+
+/****************************************************************************
+ * eventsPage.scss
+ * 
+ ****************************************************************************/
+
+/* CSS for the full calendar page. */
+%events-page-fullCalendar {
+    @extend %template-events-page-fullCalendar;
+}
+
+/* When user is selecting cells. */
+%events-page-fc-highlight {
+    @extend %template-events-page-fc-highlight;
+}
+
+/* Style for events shown on calendar. */
+%events-page-fc-event {
+    @extend %template-events-page-fc-event;
+}
+
+/* Color of text when hovering mouse over an event on calendar. */
+%events-page-popover {
+    @extend %template-events-page-popover;
+}
+
+
+/****************************************************************************
+ * manageTeamToCapstonePage.scss
+ ****************************************************************************/
+
+/* Settings for background of the page. */
+%manage-team-to-capstone-page-background{
+    @extend %template-manage-team-to-capstone-page-background;
+}
+
+/* Color and style of the select options. */
+%manage-team-to-capstone-page-selectoption-css {
+    @extend %template-manage-team-to-capstone-page-selectoption-css;
+}
+
+/* Color and style when selecting user. */
+%manage-team-to-capstone-page-selectuser-css {
+    @extend %template-manage-team-to-capstone-page-selectuser-css;
+}
+
+
+/****************************************************************************
+ * sponsorsPage.scss
+ ****************************************************************************/
+
+/* CSS for background of sponsors page */
+%sponsors-page-background-style{
+    background-color: $sponsors-page-background-color;
+    height: 200%;
+    width: 100%;
+    position:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+/* Header for the 'Featured Sponsors' section */
+%sponsors-page-featured-sponsors-header{
+    @extend %template-sponsors-page-featured-sponsors-header;
+}
+
+/* Width of featured sponsors cards */
+$sponsors-page-sponsor-cards-width: $template-sponsors-page-sponsor-cards-width;
+
+/* CSS for featured sponsors cards */
+%sponsors-page-sponsor-cards-style{
+    @extend %template-sponsors-page-sponsor-cards-style;
+}
+
+/* Padding for each Sponsors card */
+%sponsors-page-sponsors-list-cards-padding{
+    @extend %template-sponsors-page-sponsors-list-cards-padding;
+}
+
+/* CSS for accordion imported from overview_sponsors.vue */
+%sponsors-page-accordion-style{
+    @extend %template-sponsors-page-accordion-style;
+}
+
+
+/****************************************************************************
+ * supportPage.scss
+ ****************************************************************************/
+
+/* CSS for background of support page */
+%support-page-background-style{
+    @extend %template-support-page-background-style;
+}
+
+/* CSS for customizing title of support page */
+%support-page-title{
+    @extend %template-support-page-title;
+}
+
+/* Centering and font size of the inquiry section */
+%support-page-inquiry{
+    @extend %template-support-page-inquiry;
+}
+
+/* Font size and centering of support users */
+%support-page-users-style{
+    text-align: center;
+}
+
+/* Text color and size of support users */
+%support-page-users-color{
+    @extend %template-support-page-users-color;
+}
+
+
+/****************************************************************************
+ * ProjectsPage Directory:
+ *      - projectsIDPage.scss
+ ****************************************************************************/
+
+/* Background color of project page */
+$project-page-background-color: $template-project-page-background-color;
+
+/* Project title text */
+%project-page-title-style{
+    @extend %template-project-page-title-style;
+}
+
+/* Placement of title text in carousel */
+%project-page-title-placement{
+    @extend %template-project-page-title-placement;
+} 
+
+/* Background color of carousel */
+$project-page-carousel-background-color: $template-project-page-carousel-background-color;
+
+/* Formatting of images in carousel */
+%project-page-carousel-image{
+    top: 0;
+    left: 0;
+    min-width: 40%;
+    height: 40rem;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Marketing description under carousel */
+%project-page-marketing-desc{
+    @extend %template-project-page-marketing-desc;
+}
+
+/* Marketing title under carousel */
+%project-page-marketing-title{
+    @extend %template-project-page-marketing-title;
+}
+
+/* Project's "College Of..." and "Department of..." text */
+%project-page-project-of-desc{
+    @extend %template-project-page-project-of-desc;
+}
+
+/* Enhance the headings of featurettes */
+%project-page-featurette-heading-style{
+    @extend %template-project-page-featurette-heading-style;
+}
+
+/* Blogpost description text size */
+$project-page-blogpost-text-size: 22px;
+
+/* Blogpost comment's user text size */
+$project-page-blogpost-user-text-size: 18px;
+
+/* Team members formatting */
+%project-page-team-members-format{
+    font-size: 25px;
+    text-align: left;
+    margin-left: 120px;
+}
+
+/* Post an Update heading text style */
+%project-page-post-update-text{
+    font-size: 40px;
+    text-shadow: rgb(186, 192, 186) 0px 0px 10px;
+}
+
+/* Sub-headers under Post an Update form */
+$project-page-post-update-subheaders: 25px;
+
+/****************************************************************************
+ * OtherPage Directory:
+ *      - management.scss
+ ****************************************************************************/
+
+/* positioning for the forms on these pages */
+%management-form-container{
+    @extend %template-management-form-container;
+}
+
+/* Width of the submit button */
+%management-form-submit-btn{
+    width: 200px;
+}
+
+/* styling for the title on these pages */
+%management-form-title{
+    @extend %template-management-form-title;
+}
+
+/* styling for the dropdown selectors on these pages */
+%management-form-selector{
+    @extend %template-management-form-selector;
+}
+
+/* styling for the active dropdown selector on these pages */
+%management-form-selector:active:focus{
+    @extend %template-management-form-selector:active:focus;
+}
+
+/* styling for the options of the dropdown selectors on these pages */
+%management-form-selector-option{
+    @extend %template-management-form-selector;
+}
+
+/* styling for the buttons on these pages */
+%management-form-btn{
+     @extend %template-management-form-btn;
+}
+
+/* styling for the remove buttons on these pages */
+%management-form-remove-tag-btn:active{
+    @extend %template-management-form-remove-tag-btn:active;
+}
+
+/* styling for hovering the remove buttons on these pages */
+%management-form-btn:focus{
+    @extend %template-management-form-btn:focus;
+}
+
+/* styling for the remove buttons on these pages */
+%management-form-remove-tag-btn{
+   @extend %template-management-form-remove-tag-btn;
+}
+
+/* styling for hovering the remove buttons on these pages */
+%management-form-remove-tag-btn:hover{
+    @extend %template-management-form-remove-tag-btn:hover;
+
+}
+
+
+/****************************************************************************
+ * OtherPages/dashboards Directory:
+ *      - dashboard.scss
+ ****************************************************************************/
+
+/* styling for the background */
+%dashboard-background{
+    @extend %template-dashboard-background;
+}
+
+/* positioning for the header text */
+%dashboard-header{
+    @extend %template-dashboard-header;
+}
+
+/* positioning for the table layout on these pages */
+%dashboard-table-container{
+    @extend %template-dashboard-table-container;
+}
+
+/* styling for the buttons on these pages */
+%dashboard-button {
+    @extend %template-dashboard-button;
+}
+
+/* color for the text buttons */
+$dashboard-button-color: $template-dashboard-button-color;
+
+/* positioning for the Info column */
+%dashboard-info-column{
+    @extend %template-dashboard-info-column;
+}
+
+/* positioning for the Actions column */
+%dashboard-actions-column{
+    @extend %template-dashboard-actions-column;
+}
+
+/* styling for the column headers */
+%dashboard-table-header{
+    @extend %template-dashboard-table-header;
+}
+
+
+/****************************************************************************
+ * aboutPage.scss
+ ****************************************************************************/
+
+/* Background CSS for about page. */
+%about-page-background{
+    @extend %template-about-page-background;
+}
+
+

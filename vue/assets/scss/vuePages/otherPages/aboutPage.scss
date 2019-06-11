@@ -1,0 +1,17 @@
+/*
+ * Relevant Page: About.vue
+ */
+
+ .about-header{
+    text-align: center;
+    @extend %support-page-title;
+}
+
+.about-content{
+    @extend %support-page-inquiry;
+}
+
+.about-page-background{
+    @extend %about-page-background;
+}
+

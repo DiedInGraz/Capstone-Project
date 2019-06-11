@@ -1,0 +1,17 @@
+/*
+ * Relevant Component: Header.vue
+ */ 
+
+#rectangle-header {
+  @extend %header-component-style;
+}
+
+.header-img{
+  @extend %header-img-pic;
+  width: $header-img-width;
+}
+
+.header-logo-style{
+  @extend %header-logo-style-padding;
+}
+

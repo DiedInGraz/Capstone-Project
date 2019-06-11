@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "department",
+  "info": {
+    "name": "department",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "department_name": {
+      "default": "",
+      "type": "string"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "departments"
+    }
+  }
+}

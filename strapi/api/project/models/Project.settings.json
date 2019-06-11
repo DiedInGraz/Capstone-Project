@@ -1,0 +1,63 @@
+{
+  "connection": "default",
+  "collectionName": "project",
+  "info": {
+    "name": "project",
+    "description": "Projects for Capstones."
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "ProjectName": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "Sponsor": {
+      "default": "",
+      "type": "string"
+    },
+    "Description": {
+      "default": "",
+      "type": "text"
+    },
+    "LastUpdated": {
+      "default": "",
+      "type": "date"
+    },
+    "Picture": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "blogposts": {
+      "collection": "blogpost",
+      "via": "project"
+    },
+    "teams": {
+      "collection": "team",
+      "via": "project"
+    },
+    "users": {
+      "collection": "user",
+      "via": "project",
+      "dominant": true,
+      "plugin": "users-permissions"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "projects",
+      "dominant": true
+    },
+    "departments": {
+      "model": "department",
+      "via": "projects"
+    },
+    "schools": {
+      "model": "school",
+      "via": "projects"
+    }
+  }
+}

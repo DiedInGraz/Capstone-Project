@@ -1,0 +1,21 @@
+/*
+ * Relevant Component: Sponsors/why_sponsor.vue
+ */ 
+
+ .why-sponsor-header{
+    @extend %why-sponsor-component-left-col;
+}
+
+.why-sponsor-align-content{
+    margin-top: 40px;
+}
+
+.why-sponsor-title{
+    @extend %why-sponsor-component-subtitle;
+}
+
+/* All information displayed from this component is formatted here. */
+.why-sponsor-explanation{
+    @extend %why-sponsor-component-body;
+    margin-top: 20px;
+}

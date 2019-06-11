@@ -1,0 +1,52 @@
+/*
+ * Relevant Page: blogposts/_id.vue
+ */
+
+.blogpost-id-detail{
+    background-color:$blogpost-id-background-color;
+}
+
+.blogpost-id-section{
+    margin-top: 45px;
+}
+
+.blogpost-id-heading {
+    font-size: $blogpost-id-title-font-size;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    text-shadow: $template-blogpost-id-title-shadow;
+}
+
+.blogpost-id-description{
+    font-size: $blogpost-id-desc-font-size;
+}
+
+.blogpost-id-image{
+    @extend %blogpost-id-image-size;
+}
+
+.blogpost-comments-id-heading{
+    @extend %blogpost-id-comments-id-heading;
+}
+
+.blogpost-comments-id-section{
+    margin-left: 45px;
+}
+
+.blogpost-comment-id-username{
+    @extend %blogpost-id-username;
+    margin-left: 50px;
+}
+
+.blogpost-id-comment-time{
+    margin-left:30px;
+}
+
+.blogpost-id-form-fixed{
+    position: fixed;
+}
+
+.blogpost-id-form-description{
+    font-size:35px;
+}

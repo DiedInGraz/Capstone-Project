@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "team",
+  "info": {
+    "name": "team",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "users": {
+      "collection": "user",
+      "dominant": true,
+      "via": "teams",
+      "plugin": "users-permissions"
+    },
+    "project": {
+      "model": "project",
+      "via": "teams"
+    }
+  }
+}

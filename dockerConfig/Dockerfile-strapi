@@ -1,0 +1,54 @@
+#   File: Dockerfile-strapi
+#   Author: Ben Pennington
+#   Description: This dockerfile is for building the Strapi container.
+
+#strapi container
+#updated by Ben Pennington on:
+#2019 04 26
+
+#Note: This dockerfile expects a private key used to clone the git repo. The key
+#is stored in the same directory as the current directory. 
+#If this is not the case, or you do not wish to clone the git repo, comment out 
+#the lines "COPY ./id_rsa /root/.ssh" 
+#and "RUN cd / && git clone git@gitlab.ecs.baylor.edu:012019-Capstone/section01-group02.git"
+
+#Select container from docker hub
+FROM ubuntu:18.04
+
+#Set maintainer
+LABEL maintainer="ben_pennington@baylor.edu"
+
+#Set environment variables
+ENV HOST_STRAPI="0.0.0.0"
+ENV MONGO_PORT_27017_TCP_ADDR="192.168.0.2"
+
+#Add private key to container to be able to use git clone from repository
+RUN mkdir -p /root/.ssh/ && chmod 0700 /root/.ssh/
+COPY ./id_rsa /root/.ssh/ 
+RUN chmod 0700 /root/.ssh/id_rsa
+
+#Install dependencies
+RUN apt-get update
+RUN apt-get install -y curl git
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+RUN apt-get install -y nodejs 
+RUN npm i strapi@3.0.0-alpha.22 -g
+#RUN npm install -g npm@latest && npm install strapi@alpha -g
+#RUN npm install -g npm@6.4.1 && npm install strapi@3.0.0-alpha.22 -g
+#3.0.0-alpha.22
+
+#Add repo host to known_hosts file
+RUN apt-get install -y ssh
+RUN touch /root/.ssh/known_hosts
+RUN ssh-keyscan gitlab.ecs.baylor.edu >> /root/.ssh/known_hosts
+RUN chmod 0700 /root/.ssh/known_hosts
+
+#Clone project
+RUN cd / && git clone git@gitlab.ecs.baylor.edu:012019-Capstone/section01-group02.git
+
+#Expose ports to run - defaults to TCP
+EXPOSE 1337
+
+#Start script to run project
+#Set the docker container to run as an executable when it starts
+ENTRYPOINT cd /section01-group02/strapi/ && ./scriptCheckStrapiRunning.sh

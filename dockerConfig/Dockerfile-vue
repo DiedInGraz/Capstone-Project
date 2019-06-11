@@ -1,0 +1,53 @@
+#   File: Dockerfile-vue
+#   Author: Ben Pennington
+#   Description: This dockerfile is for building the Vue container.
+
+#vue container
+#updated by Ben Pennington on:
+#2019 04 25
+
+#Note: This dockerfile expects a private key used to clone the git repo. The key
+#is stored in the same directory as the current directory. 
+#If this is not the case, or you do not wish to clone the git repo, comment out 
+#the lines "COPY ./id_rsa /root/.ssh" 
+#and "RUN cd / && git clone git@gitlab.ecs.baylor.edu:012019-Capstone/section01-group02.git"
+
+#Select container from docker hub
+FROM ubuntu:18.04
+
+#Set maintainer
+LABEL maintainer="ben_pennington@baylor.edu"
+
+#Set environment variables
+ENV HOST="0.0.0.0"
+
+#Add private key to container to be able to use git clone from repository
+RUN mkdir -p /root/.ssh/ && chmod 0700 /root/.ssh/
+COPY ./id_rsa /root/.ssh/ 
+RUN chmod 0700 /root/.ssh/id_rsa
+
+#Install dependencies
+RUN apt-get update
+RUN apt install -y curl git
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt install -y nodejs
+RUN npm install -g npm@latest && npm install -g @vue/cli
+
+#Add repo host to known_hosts file
+RUN apt-get install -y ssh
+RUN touch /root/.ssh/known_hosts
+RUN ssh-keyscan gitlab.ecs.baylor.edu >> /root/.ssh/known_hosts
+RUN chmod 0700 /root/.ssh/known_hosts
+
+
+#Clone project
+RUN cd / && git clone git@gitlab.ecs.baylor.edu:012019-Capstone/section01-group02.git
+
+#Expose ports to run - defaults to TCP
+EXPOSE 3000
+
+#Start script to run project
+#Set the docker container to run as an executable when it starts
+#Currently runs in exec mode. Remove [""] to run in shell mode
+ENTRYPOINT cd /section01-group02/vue/ && ./scriptCheckVueRunning.sh
+

@@ -1,0 +1,50 @@
+/* 
+ * Relevant Component: Navbar.vue
+ */
+
+.navbar-overall-margin{
+  margin: 0px;
+}
+
+nav.navbar-settings{
+  background-color: $navbar-component-color;
+  padding: 0px;
+}
+
+.navbar-nav{
+  @extend %navbar-component-style;
+  background-color: $navbar-component-color;
+}
+
+.navbar-nuxt-link:hover{
+  text-decoration: none;
+}
+
+.nav-link{
+  @extend %navbar-component-text-style;
+  outline: none;
+  text-align: center;
+  border: none;
+}
+
+.nav-link:focus{
+  outline: none;
+}
+
+button.nav-link:enabled:hover {
+  text-decoration: underline;
+  background-color: #111;
+  cursor: pointer;
+}
+
+button.nav-link:disabled {
+  @extend %navbar-component-disabled-style;
+}
+
+button.nav-link:focus{
+    background-image: $navbar-component-focus-button;
+}
+
+.dropdown-item:active{
+  background-color: $dropdown-item-active;
+}

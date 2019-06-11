@@ -1,0 +1,117 @@
+/* 
+ * This file contains the central system for managing all the SCSS files
+ * throughout the vue/assets/scss directory.
+ */
+
+
+/**************************************************************************
+ * TEMPLATE FILES
+ **************************************************************************/
+
+/* 
+ * These two files can be interchangeable to switch between different types
+ * of designs for the website.
+ * These files use the SCSS variables from Pages_Template.scss and 
+ * Components_Template.scss.
+ */
+@import 'templates/baylor_template';
+//@import 'templates/template_1';
+
+/*
+ * Pages_Template.scss: Contains the SCSS variables for all Vue Pages.
+ * Components_Template.scss: Contains the SCSS variables for all Components.
+ */
+@import 'templates/pages_template';
+@import 'templates/components_template';
+
+
+/* ---------------------------------------------------------------------*/
+/* THESE FILES DEAL WITH STYLING FOR EACH INDIVIDUAL PAGE OR COMPONENT: */
+/* ---------------------------------------------------------------------*/
+
+/**************************************************************************
+ * COMPONENTS FILES
+ **************************************************************************/
+
+/* Header.vue Component */
+@import 'vueComponents/headerComponent';
+
+/* Navbar.vue Component */
+@import 'vueComponents/navbarComponent';
+
+/* home_view.vue Component */
+@import 'vueComponents/homepageComponent';
+
+/* Sponsors directory under Components */
+@import 'vueComponents/sponsorsComponents/overviewSponsorsComponent';
+@import 'vueComponents/sponsorsComponents/whySponsorComponent';
+
+/* AccountMenus directory under Components */
+@import 'vueComponents/accountMenusComponents/adminDropdownComponent';
+@import 'vueComponents/accountMenusComponents/professorDropdownComponent';
+@import 'vueComponents/accountMenusComponents/publicDropdownComponent';
+@import 'vueComponents/accountMenusComponents/sponsorDropdownComponent';
+@import 'vueComponents/accountMenusComponents/studentDropdownComponent';
+
+/* about_content.vue Component */
+@import 'vueComponents/aboutContentComponent';
+
+/* account_content.vue Component */
+@import 'vueComponents/accountContentComponent';
+
+/* dashboardAdmin_content.vue */
+@import 'vueComponents/dashboardAdminContentComponent';
+
+
+
+/**************************************************************************
+ * PAGES FILES
+ **************************************************************************/
+
+/* Authentication directory under Pages */
+@import 'vuePages/AuthenticationPages/LoginPage';
+@import 'vuePages/AuthenticationPages/LogoutPage';
+@import 'vuePages/AuthenticationPages/RegisterPage';
+
+/* blogposts/_id.vue page */
+@import 'vuePages/blogpostsPage/blogpostIDPage';
+
+/* cmsusers/_id.vue page */
+@import 'vuePages/cmsusersPage/cmsusersIDPage';
+
+/* projects/_id.vue page */
+@import 'vuePages/projectsPage/projectsIDPage';
+
+
+/* OTHERPAGES DIRECTORY */
+
+/* AccessDenied.vue page */
+@import 'vuePages/otherPages/accessDeniedPage';
+
+/* Capstone.vue page */
+@import 'vuePages/otherPages/capstonePage';
+
+/* Events.vue page */
+@import 'vuePages/otherPages/eventsPage';
+
+/* index.vue page */
+@import 'vuePages/otherPages/indexPage';
+
+/* ManageTeamtoCapstone.vue page */
+@import 'vuePages/otherPages/manageTeamToCapstonePage';
+
+/* Sponsors.vue page */
+@import 'vuePages/otherPages/sponsorsPage';
+
+/* Support.vue page */
+@import 'vuePages/otherPages/supportPage';
+
+/* dashboards/students.vue page */
+@import 'vuePages/otherPages/dashboards/dashboard';
+
+/* all management pages */
+@import 'vuePages/otherPages/management';
+
+/* about page */
+@import 'vuePages/otherPages/aboutPage';
+

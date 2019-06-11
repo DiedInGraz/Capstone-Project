@@ -1,0 +1,103 @@
+/* 
+ * Relevant Component: home_view.vue
+ */
+
+.bg-homepage{
+    @extend %homepage-component-bg;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-grad-homepage {
+    background-image: $homepage-component-bg-grad;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img.home-carousel-img-1{
+    @extend %homepage-component-img-carousel;
+}
+
+img.home-carousel-img-2{
+    @extend %homepage-component-img-carousel;
+}
+
+img.home-carousel-img-3{
+    @extend %homepage-component-img-carousel;
+}
+
+%homepage-button{
+    @extend %homepage-component-button;
+}
+
+.grow:hover{
+    transform: scale(1.05);
+}
+
+.homepage-btns{
+    @extend %homepage-button;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.homepage-btns:hover{
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.homepage-btns:focus{
+   outline: none;
+}
+
+.header-home-p1{
+    @extend %homepage-component-header-title;
+}
+
+.homepage-p2{
+    @extend %homepage-component-header-divider;
+    margin-top:5px; 
+    margin-bottom:10px;
+    height:3px;
+}
+
+.homepage-paragraph1{
+    color: $homepage-component-header-body-color;
+}
+
+.homepage-btn-wrap{
+    @extend %homepage-component-btn-wrap;
+}
+
+@media (max-width: 820px) {
+    .homepage-btn-wrap {
+        position: absolute;
+        display: block;
+        justify-content: right;
+        align-items: right;
+        text-align: right;
+        top: 25%;
+        width: 150px;
+        right: 12%;
+    }
+    .homepage-btns{
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+  }
+
+.content-homepage {
+    @extend %homepage-component-header-box;
+    word-wrap: break-word;
+    float: left;
+    padding: 20px;
+    z-index: 3;
+    text-align: left;
+}

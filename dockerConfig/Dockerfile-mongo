@@ -1,0 +1,23 @@
+#   File: Dockerfile-mongo
+#   Author: Ben Pennington
+#   Description: This dockerfile is for building the Mongo container.
+
+#mongo container
+#updated by Ben Pennington on:
+#2019 04 25
+
+#Select container from docker hub
+FROM mongo:latest
+
+#Set maintainer
+LABEL maintainer="ben_pennington@baylor.edu"
+
+#Install dependencies
+RUN apt-get update
+RUN mkdir /blankInstall/ /demoData/
+COPY ./blankInstall/serverTest /blankInstall/serverTest
+COPY ./demoData/serverTest /demoData/serverTest
+COPY ./demoData/images /demoData/images
+
+#Expose ports to run - defaults to TCP
+EXPOSE 27017

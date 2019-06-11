@@ -1,0 +1,46 @@
+/*
+ * Relevant Page: Sponsors.vue
+ */
+
+/* Imports a background image and makes it faded. */
+.sponsors-page:before{
+    content: ' ';
+    @extend %sponsors-page-background-style;
+    z-index: -1;
+}
+
+/* Formats the 'why_sponsor' imported component. */
+.sponsors-page-why-sponsor-us{
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.sponsors-page-align-right-col{
+    margin-top: 37px;
+}
+
+.sponsors-page-our-sponsors{
+    @extend %sponsors-page-featured-sponsors-header;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+img.sponsors-page-card-img{
+    width: $sponsors-page-sponsor-cards-width;
+}
+
+/* To help with formatting each featured sponsor fetched from Strapi API. */
+.sponsors-list-cards{
+    @extend %sponsors-page-sponsor-cards-style;
+}
+
+/* Get rid of the bullet points. */
+.sponsors-list-cards li{
+    list-style-type: none;
+    @extend %sponsors-page-sponsors-list-cards-padding;
+}
+
+/* Formats the 'overview_sponsors' imported component. */
+.sponsors-page-overview-sponsors{
+    @extend %sponsors-page-accordion-style;
+}

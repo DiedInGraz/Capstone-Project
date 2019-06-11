@@ -1,0 +1,28 @@
+/*
+ * Relevant Page: Support.vue
+ */
+
+/* Imports a background image that is faded. */
+.support-page:before{
+    content: ' ';
+    @extend %support-page-background-style;
+    z-index: -1;
+}
+
+.page-layout .support-page-header{
+    @extend %support-page-title;
+}
+
+.support-page-inquiry{
+    @extend %support-page-inquiry;
+  }
+
+/* Helps format each Support user fetched from Strapi API. */
+.support-page-content h1{
+    @extend %support-page-users-style;
+}
+
+/* Formats the specific fields of each Support user fetched from Strapi API. */
+.support-page-info{
+    @extend %support-page-users-color;
+}

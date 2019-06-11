@@ -1,0 +1,672 @@
+/***************************************************************************
+ * Baylor_template
+ *
+ * Created By: Tim Lee
+ * 
+ * This SCSS file is the default Baylor template used by the website.
+ **************************************************************************/
+
+
+/**********************************************************************
+ * Component/Page(s): Header.vue
+ * 
+ * Primary Contributor(s): KJ Smith
+ **********************************************************************/
+
+/* colors for header gradient */
+$color-header-light: #2F582F;
+$color-header-dark: #172C17;
+
+/* styling for the header component */
+%template-header-component-style{
+    width: 100%;
+    height: 65px;
+    // background-image: linear-gradient(to right, 
+    // $color-header-dark, $color-header-light,
+    // $color-header-dark);
+    background-color: rgb(28, 68, 45);
+}
+
+/* clear url for header logo */
+%header-img-pic{
+    background: url("");
+} 
+
+/* set width for header logo */
+$template-header-img-width: 250px;
+
+/* set padding for header logo */
+%template-logo-style-padding{
+    padding: 10px 0px 0px 50px;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): home_view.vue
+ * 
+ * Primary Contributor(s): KJ Smith
+ **********************************************************************/
+
+/* styling for homepage carousel */
+%template-homepage-component-img-carousel{
+    width: 100%;
+    display: black;
+}
+
+/* background image for homepage */
+$default-background-img-homepage: "../rogers.jpg";
+
+/* gradient overlay for background */
+$template-homepage-component-bg-grad: linear-gradient(rgba(0, 0, 0, 0.9) 55%, rgba(0,0,0,0));
+
+/* title for black box on homepage */
+%template-homepage-component-header-title{
+    color:white; 
+    font-weight: bold; 
+    font-size:30px;
+}
+
+/* divider line between black box title and text */
+%template-homepage-component-header-divider{
+    background-color: rgb(253,205,72);
+    width:60px
+}
+
+/* set black box text color */
+$template-homepage-component-header-body-color: white;
+
+/* styling for homepage black box */
+%template-homepage-component-header-box{
+    width: 50%;
+    position: absolute; top: 15px; left: 15px;
+    font-family: 'FuturaPT', Arial, sans-serif;
+    color: black;
+    background: rgba(0, 0, 0, .8);
+    font-size: 20px;
+}
+
+/* styling for homepage buttons */
+%template-homepage-component-button{
+    position: relative;
+    border: none;
+    background-color: rgb(241, 221, 32);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+    color: black;
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+/* positioning for homepage buttons */
+%template-homepage-component-btn-wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    top: -140px;
+    bottom: 12%;
+    width: 300px;
+}
+
+/**********************************************************************
+ * Component/Page(s): Navbar.vue
+ * 
+ * Primary Contributor(s): KJ Smith
+ **********************************************************************/
+
+/* positioning for navbar */
+%template-navbar-component-style{
+    width: 100%;
+    margin: 0px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+/* set background color for navbar */
+$template-navbar-component-color: rgb(27,27,27);
+
+/* styling for navbar buttons */
+%template-navbar-component-text-style{
+    color: rgb(202, 202, 202);
+    font-family: 'FuturaBT', Arial, sans-serif;
+    font-size: 15px;
+    background-image: linear-gradient(to bottom, rgb(46, 46, 46), black);
+}
+
+/* styling for disabled navbar buttons */
+%template-navbar-component-disabled-style{
+    color: rgb(78, 78, 78);
+    background-image: linear-gradient(to top, rgb(46, 46, 46), black);
+}
+
+/* styling for focused navbar buttons */
+$template-navbar-component-focus-button: linear-gradient(to top, rgb(46, 46, 46), black);
+
+/* styling for the account dropdown button (unused)*/
+%template-dropdown-account-button{
+    color: rgb(202, 202, 202);
+    font-family: 'FuturaBT', Arial, sans-serif;
+    background-image: linear-gradient(to bottom, rgb(46, 46, 46), black);
+}
+
+/* styling for the disabled dropdown button (unused) */
+%template-dropdown-account-button-disabled{
+    color: rgb(78, 78, 78);
+    background-image: linear-gradient(to top, rgb(46, 46, 46), black);
+}
+
+
+/**********************************************************************
+ * Component/Page(s): Sponsors.vue
+ * 
+ * Primary Contributor: Tim Lee
+ **********************************************************************/
+
+/* Background color of sponsors page. */
+$sponsors-page-background-color: rgb(189, 186, 148);
+
+/* Font size and color of titles of accordion */
+%template-overview-sponsors-component-accordion-title{
+    font-size: 30px;
+    color: rgb(66, 4, 4);
+}
+
+/* Font size and margin of text in accordion body */
+%template-overview-sponsors-component-accordion-body{
+    text-align: left;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+}
+
+/* Style for left side of sponsors page */
+%template-why-sponsor-component-left-col{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 55px;
+    color:rgb(21, 97, 21);
+    text-shadow: rgb(96, 99, 116) 0px 0px 10px;
+}
+
+/* Font size and color of "Why sponsors Us?" */
+%template-why-sponsor-component-subtitle{
+    font-size: 35px;
+    color:rgb(116, 15, 15);
+}
+
+/* Font size and color of why sponsor us description */
+%template-why-sponsor-component-body{
+    font-size: 20px;
+    color:rgb(24, 44, 33);
+}
+
+/* Style of "Featured Sponsors" header */
+%template-sponsors-page-featured-sponsors-header{
+    font-size: 45px;
+    color:rgb(42, 116, 35);
+    float: right;
+    margin-right: 50px;
+}
+
+/* Width of featured sponsors cards */
+$template-sponsors-page-sponsor-cards-width: 13rem;
+
+/* Layout and design of sponsors cards */
+%template-sponsors-page-sponsor-cards-style{
+    float: right;
+    margin-right: 105px;
+    opacity: 0.95;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* Padding from the top for all sponsors cards */
+%template-sponsors-page-sponsors-list-cards-padding{
+    margin-top: 10px;
+}
+
+/* Layout and formatting of the accordion */
+%template-sponsors-page-accordion-style{
+    text-align: center;
+    margin-top: 60px;
+    opacity: .98;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): blogposts/_id.vue
+ * 
+ * Primary Contributor: Tim Lee
+ **********************************************************************/
+
+/* Background color */
+$template-blogpost-id-background-color: rgb(240, 239, 230);
+
+/* Size of title of blogpost */
+$template-blogpost-id-title-font-size: 55px;
+
+/* Shadow effect for title */
+$template-blogpost-id-title-shadow: rgb(91, 94, 91) 0px 0px 10px;
+
+/* Font size and color of all comments titles */
+%template-blogpost-id-comments-id-heading{
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    text-shadow: rgb(91, 94, 91) 0px 0px 10px;
+}
+
+/* Specify max size of blogpost images */
+%template-blogpost-id-image-size{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+/* Style text of blogpost username */
+%template-blogpost-id-username{
+    font-size:18px;
+    color: rgb(180, 64, 64);
+}
+
+
+/**********************************************************************
+ * Component/Page(s): Capstone.vue
+ * 
+ * Primary Contributor: Tim Lee
+ **********************************************************************/
+
+/* Background color */
+$template-capstone-page-background-color: rgb(255, 255, 233);
+
+/* Make all components of page in the center */
+%template-capstone-page-center-all-things{
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+/* Margin from top of page for searchbar */
+%template-capstone-page-searchbar-margin-from-top{
+    margin-top: 20px;
+}
+
+/* Style for dropdowns */
+%template-capstone-page-all-dropdown{
+    float: left;
+    height: 2.5em;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    background-color: rgb(229, 241, 223);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Width of searchbar */
+%template-capstone-page-searchbar{
+    width: auto;
+}
+
+/* Center the dropdowns */
+%template-capstone-page-sponsors-box-and-dropdown{
+    justify-content: center;
+}
+
+/* Put some top padding for sponsors checkbox */
+%template-capstone-page-have-sponsors-box{
+    padding-top: 10px;
+}
+
+/* Style for dropdown of capstone projects sorting */
+%template-capstone-page-sorting-dropdown{
+    margin: auto;
+    height: 2.5em;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    background-color: rgb(229, 241, 223);
+    border: none;
+    border-radius: 5px;
+    float: none;
+    margin-bottom: 5px;
+}
+
+/* Size and margins of each project card */
+%template-capstone-page-project-cards{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 140px;
+    width: 140px;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): projects/_id.vue
+ * 
+ * Primary Contributor: Tim Lee
+ **********************************************************************/
+
+/* Background color */
+$template-project-page-background-color: rgb(211, 210, 197);
+
+/* Placement of project title */
+%template-project-page-title-placement{
+    bottom: 2rem;
+}
+
+/* Font size and color of project title */
+%template-project-page-title-style{
+    font-size: 75px;
+    color:#0e0b0c;
+    font-weight: bold;
+    text-shadow: white 0px 0px 10px;
+}
+
+/* Background color of carousel */
+$template-project-page-carousel-background-color: #777;
+
+/* Font size and color of marketing descriptions */
+%template-project-page-marketing-desc{
+    color:rgb(13, 13, 121);
+    font-size: 46px;
+}
+
+/* Font size and color of marketing title */
+%template-project-page-marketing-title{
+    font-size: 75px;
+    color: rgb(47,84,47);
+    font-weight: bold;
+    text-shadow: rgb(101, 156, 109) 0px 0px 10px;
+}
+
+/* Font size and color of project description section */
+%template-project-page-project-of-desc{
+    font-size: 31px;
+    color:rgba(109, 105, 105, 0.692);
+}
+
+/* Style for featurette headers */
+%template-project-page-featurette-heading-style{
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    text-shadow: rgb(91, 94, 91) 0px 0px 10px;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): Support.vue
+ * 
+ * Primary Contributor: Tim Lee
+ **********************************************************************/
+
+/* Background color of support page. */
+$support-page-background-color: rgb(211, 210, 197);
+
+/* Background style */
+%template-support-page-background-style{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.48;
+    background-color: $support-page-background-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Deisgn of title of support page */
+%template-support-page-title{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color:rgb(33, 97, 37);
+    margin-top: 30px;
+    text-shadow: 0 1px 0 #ccc, 
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+}
+
+/* Font size and centralize text of inquiry */
+%template-support-page-inquiry{
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Font size and color of support user contacts */
+%template-support-page-users-color{
+    font-size: 35px;
+    color:rgb(19, 75, 23);
+}
+
+/**********************************************************************
+ * Component/Page(s): all Create, Modify, or Remove pages
+ * 
+ * Primary Contributor(s): KJ Smith, Justin Yu
+ **********************************************************************/
+
+/* positioning for the forms on these pages */
+%template-management-form-container{
+    width: 400px;
+    margin: auto;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* styling for the title on these pages */
+%template-management-form-title{
+    font-size: 18px;
+    float: left;
+}
+
+/* styling for the dropdown selectors on these pages */
+%template-management-form-selector{
+    margin: 20px auto;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    background-color: rgb(229, 241, 223);
+    border: none;
+    // border: 1px solid rgb(247, 247, 247);
+    border-radius: 5px;
+}
+
+/* styling for the active dropdown selector on these pages */
+%template-management-form-selector:active:focus{
+    outline: none;
+}
+
+/* styling for the options of the dropdown selectors on these pages */
+%template-management-form-selector-option{
+    @extend %template-management-form-selector;
+}
+
+/* styling for the buttons on these pages */
+%template-management-form-btn{
+    background-color: white;
+    margin: auto auto auto 0px;
+}
+
+/* styling for the remove buttons on these pages */
+%template-management-form-remove-tag-btn:active{
+    color: red;
+}
+
+/* styling for the focused button on these pages */
+%template-management-form-btn:focus{
+    outline: none;
+}
+
+/* styling for the remove buttons on these pages */
+%template-management-form-remove-tag-btn{
+    outline: none;
+    border: none;
+}
+
+/* styling for hovering the remove buttons on these pages */
+%template-management-form-remove-tag-btn:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): dashboard.vue, *_actions.vue
+ * 
+ * Primary Contributor(s): KJ Smith
+ **********************************************************************/
+
+/* styling for the background */
+%template-dashboard-background{
+    position: absolute;
+    background-color: rgb(255, 255, 233);
+    width: 100%;
+    height: 100%;
+}
+
+/* positioning for the header text */
+%template-dashboard-header{
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+/* positioning for the table layout on these pages */
+%template-dashboard-table-container{
+    display: center;
+    margin: 25px auto auto auto;
+    width: 600px;
+}
+
+/* styling for the buttons on these pages */
+%template-dashboard-button {
+    background: none; /* Green */
+    border: none;
+    color: rgb(2, 73, 0);
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* color for the text buttons */
+$template-dashboard-button-color: rgb(2, 73, 0);
+
+/* positioning for the Info column */
+%template-dashboard-info-column{
+    float: left;
+    margin: 4px auto;
+}
+
+/* positioning for the Actions column */
+%template-dashboard-actions-column{
+    float: right;
+    text-align: center;
+    margin: 4px auto;
+}
+
+/* styling for the column headers */
+%template-dashboard-table-header{
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): About.vue
+ * 
+ * Primary Contributor(s): Ben Pennington
+ **********************************************************************/
+
+/* Background CSS for about page. */
+%template-about-page-background{
+    position: absolute;
+    background-color: rgb(255, 255, 233);
+    width: 100%;
+    height: 100%;
+}
+
+
+/**********************************************************************
+ * Component/Page(s): Events.vue
+ * 
+ * Primary Contributor(s): Justin Yu
+ **********************************************************************/
+
+/* Background color and padding for the entire page */
+%template-events-page-fullCalendar {
+    padding: 30px;
+    background-color: rgb(255, 255, 233)
+}
+
+/* Color for when user selects a cell */
+%template-events-page-fc-highlight {
+    background: gold;
+    opacity: .5; 
+}
+
+/* Color and border settings of events displayed on the calendar */
+%template-events-page-fc-event {
+    border-radius: 7px;
+    border: 3px solid rgb(5, 192, 5);
+    background: rgb(5, 192, 5);
+}
+
+/* Color of text when hovering mouse over an event */
+%template-events-page-popover {
+    color: rgb(3, 148, 11);
+}
+
+
+/**********************************************************************
+ * Component/Page(s): ManageTeamToCapstone.vue
+ * 
+ * Primary Contributor(s): Justin Yu
+ **********************************************************************/
+
+/* Settings for background of the page. */
+%template-manage-team-to-capstone-page-background{
+    background-color: rgb(255, 255, 233);
+    height: 950px;
+}
+
+/* Color and style of the select options. */
+%template-manage-team-to-capstone-page-selectoption-css {
+    margin: 20px auto;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    background-color: rgb(129, 190, 129);
+    border: 1px solid rgb(104, 155, 104);
+    border-radius: 5px;
+    appearance: none;
+}
+
+/* Color and style when selecting user. */
+%template-manage-team-to-capstone-page-selectuser-css {
+    margin: 20px auto;
+    margin-right: 15px;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    background-color: rgb(229, 223, 241);
+    border: 1px solid rgb(247, 247, 247);
+    border-radius: 5px;
+    appearance: none;
+}
+

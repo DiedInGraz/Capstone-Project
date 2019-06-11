@@ -1,0 +1,30 @@
+/*
+ * Relevant Page: Events.vue
+ *
+ * Note: Will need to figure this out, since the Events page handles CSS
+ *       differently that the rest of the pages.
+ */
+
+/* CSS for the full calendar page. */
+.fullCalendar {
+    @extend %events-page-fullCalendar;
+}
+
+/* When user is selecting cells. */
+.fc-highlight {
+    @extend %events-page-fc-highlight;
+}
+
+.fc-unthemed td.fc-today {
+  background: rgb(182, 197, 247);
+}
+
+/* Style for events shown on calendar. */
+.fc-event {
+    @extend %events-page-fc-event;
+}
+
+/* Color of text when hovering mouse over an event on calendar. */
+.popover {
+    @extend %events-page-popover;
+}

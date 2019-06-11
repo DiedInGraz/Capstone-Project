@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "events",
+  "info": {
+    "name": "event",
+    "description": "List of events"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "start": {
+      "default": "",
+      "type": "date",
+      "required": true
+    },
+    "end": {
+      "default": "",
+      "type": "date",
+      "required": true
+    }
+  }
+}

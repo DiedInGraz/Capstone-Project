@@ -1,0 +1,33 @@
+
+/*
+    Relevant pages: all create, edit, delete, manage, etc. pages
+*/
+
+.management-form-container{
+    @extend %management-form-container
+}
+
+.management-form-submit-btn{
+    @extend %management-form-submit-btn;
+}
+
+.management-form-title{
+    @extend %management-form-title;
+}
+
+.management-form-selector{
+    @extend %management-form-selector
+}
+
+.management-form-btn{
+    @extend %management-form-btn;
+}
+
+.management-form-remove-tag-btn{
+    @extend %management-form-btn;
+    @extend %management-form-remove-tag-btn
+}
+
+.management-form-selector-option{
+    @extend %management-form-selector-option;
+}
